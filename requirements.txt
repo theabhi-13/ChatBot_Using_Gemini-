@@ -1,5 +1,11 @@
-langchain-google-genai>=4.0.0
-langchain>=0.1.0
+langchain-google-genai
+langchain
 langchain-core
 streamlit
 python-dotenv
+langchain_community
+langchain_groq
+langserve
+fastapi
+uvicorn 
+sse_starlette
