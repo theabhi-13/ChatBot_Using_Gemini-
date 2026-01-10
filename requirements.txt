@@ -1,18 +1,41 @@
-langchain_google_genai
-langchain_core
-streamlit 
-python-dotenv
-langchain_community
-langchain_groq
-langserve
+# ===============================
+# Core LangChain (stable 0.2.x)
+# ===============================
+langchain==0.2.16
+langchain-core==0.2.38
+langchain-community==0.2.16
+langchain-text-splitters==0.2.4
+
+# ===============================
+# Google Gemini
+# ===============================
+langchain-google-genai==1.0.10
+google-generativeai==0.7.2
+
+# ===============================
+# App / API
+# ===============================
+streamlit
 fastapi
 uvicorn
-bs4
-pypdf
-langchain
-langchain.text_splitters
+python-dotenv
+packaging>=24.1
+
+# ===============================
+# LangServe
+# ===============================
+langserve==0.2.3
+
+# ===============================
+# RAG utilities
+# ===============================
 chromadb
 faiss-cpu
+pypdf
+bs4
 sentence-transformers
+
+# ===============================
+# Notebooks (optional)
+# ===============================
 ipywidgets
-pydantic<2.0

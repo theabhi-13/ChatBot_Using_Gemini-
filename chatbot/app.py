@@ -9,12 +9,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Safely set environment variables only if present (avoid assigning None)
-gemini_key = os.getenv("GEMINI_API_KEY")
+gemini_key = os.getenv("GOOGLE_API_KEY")
 if gemini_key is not None:
-    os.environ["GEMINI_API_KEY"] = gemini_key
+    os.environ["GOOGLE_API_KEY"] = gemini_key
 
 # LangSmith Tracing
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
+trace_key = os.getenv("LANGCHAIN_TRACING_V2")
+if trace_key is not None:
+    os.environ["LANGCHAIN_TRACING_V2"] = trace_key
 langchain_key = os.getenv("LANGCHAIN_API_KEY")
 if langchain_key is not None:
     os.environ["LANGCHAIN_API_KEY"] = langchain_key
@@ -29,7 +31,7 @@ prompt=ChatPromptTemplate.from_messages(
 
 #Steamlit Framework
 st.title("ChatBot using Gemini Pro")
-user_input=st.text_input("How can we assist you?")
+user_input=st.text_input("Search Here:")
 
 #Gemini Pro Model
 llm = ChatGoogleGenerativeAI(
@@ -39,6 +41,6 @@ llm = ChatGoogleGenerativeAI(
 
 chain = prompt | llm | StrOutputParser()
 if user_input:
-    response = chain.invoke({"question": user_input})
+    response = chain.invoke({"question":user_input})
     st.write(response)
     st.success("Response Generated Successfully!")

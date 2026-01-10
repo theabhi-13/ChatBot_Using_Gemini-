@@ -37,7 +37,7 @@ add_routes(
     app,
     llm,
     path="/groq"
-)   
+)
 
 prompt1 = ChatPromptTemplate.from_template(
     "Write me an essay about {topic}"
