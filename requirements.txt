@@ -39,3 +39,4 @@ sentence-transformers
 # Notebooks (optional)
 # ===============================
 ipywidgets
+watchdog
