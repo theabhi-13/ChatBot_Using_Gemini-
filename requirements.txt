@@ -1,16 +1,18 @@
 # ===============================
 # Core LangChain (stable 0.2.x)
 # ===============================
-langchain==0.2.16
-langchain-core==0.2.38
-langchain-community==0.2.16
-langchain-text-splitters==0.2.4
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-openai
+langchainhub
 
 # ===============================
 # Google Gemini
 # ===============================
-langchain-google-genai==1.0.10
-google-generativeai==0.7.2
+langchain-google-genai
+google-generativeai
 
 # ===============================
 # App / API
@@ -19,12 +21,12 @@ streamlit
 fastapi
 uvicorn
 python-dotenv
-packaging>=24.1
+packaging
 
 # ===============================
 # LangServe
 # ===============================
-langserve==0.2.3
+langserve
 
 # ===============================
 # RAG utilities
@@ -39,4 +41,9 @@ sentence-transformers
 # Notebooks (optional)
 # ===============================
 ipywidgets
+
 watchdog
+
+wikipedia
+arxiv
+huggingface
