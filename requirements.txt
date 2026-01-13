@@ -47,3 +47,8 @@ watchdog
 wikipedia
 arxiv
 huggingface
+
+groq
+langchain-groq
+
+beautifulsoup4
